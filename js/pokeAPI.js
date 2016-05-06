@@ -21,7 +21,9 @@ const pokeAPI = {};
                 (json) => {
                   const total = json.count;
                   console.log(`There are ${total} pokemon.`);
-                  document.querySelector('h1').innerHtml = total;
+                  var target = document.querySelector('h1');
+                  target.textContent = 'There are ' + total + ' pokemon.';
+                  console.log(target);
                 });
   };
 }());
