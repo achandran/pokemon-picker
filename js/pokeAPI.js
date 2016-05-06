@@ -19,11 +19,8 @@ const pokeAPI = {};
     // First get a count of the total number of pokemon available
     makeRequest(`${BASE_URL}/pokemon/`,
                 (json) => {
-                  const total = json.count;
-                  console.log(`There are ${total} pokemon.`);
-                  var target = document.querySelector('h1');
-                  target.textContent = 'There are ' + total + ' pokemon.';
-                  console.log(target);
+                  const counter = document.getElementById('counter');
+                  counter.textContent = `Picking from ${json.count} pokemon.`;
                 });
   };
 }());
