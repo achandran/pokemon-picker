@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html lang='en'>
-    <head>
-        <meta charset='utf-8'>
-        <meta name='viewport' content='width=device-width, initial-scale=1'>
-        <title>Pokemon Picker</title>
-        <script src='js/pokeAPI.js'></script>
-    </head>
-    <body>
-        <h1>Welcome to Pokemon picker!</h1>
-        <h3 id='counter'>Picking from ... pokemon</h3>
-        <script>
-            if(self.fetch) {
-                console.log('fetch supported!');
-                pokeAPI.start();
-            } else {
-                console.log('Sorry, fetch is not supported');
-            }
-        </script>
-    </body>
+  <head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Pokemon Picker</title>
+    <script src='js/pokeAPI.js'></script>
+  </head>
+  <body>
+    <h1>Welcome to Pokemon picker!</h1>
+    <h4 id='counter'>Picking from ... pokemon...</h4>
+    <h3 id='pokemon1'>???</h3>
+    <h3 id='pokemon2'>???</h3>
+    <script>
+      document.addEventListener("DOMContentLoaded", function(event) {
+        if (self.fetch) {
+          pokeAPI.start();
+        } else {
+          console.log('Sorry, fetch is not supported');
+        }
+      });
+    </script>
+  </body>
 </html>
